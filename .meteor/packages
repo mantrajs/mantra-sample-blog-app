@@ -22,3 +22,6 @@ cosmos:browserify
 
 
 npm-container
+kadira:flow-router
+kadira:react-layout
+reactive-dict
