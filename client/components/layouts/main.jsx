@@ -1,7 +1,10 @@
+import Navigations from '../navigations/index.jsx';
+
 const Layout = ({content = () => null }) => (
   <div>
     <header>
     <h1>Mantra Voice</h1>
+    <Navigations />
     </header>
 
     <div>

@@ -8,21 +8,23 @@ import Post from '../containers/post';
 
 const MainLayoutCtx = applyContext(context, actions)(MainLayout);
 
-// Move these as a module and call this from a main file
-FlowRouter.route('/', {
-  name: 'posts.list',
-  action() {
-    ReactLayout.render(MainLayoutCtx, {
-      content: () => (<PostList />)
-    });
-  }
-});
+export const initRoutes = () => {
+  // Move these as a module and call this from a main file
+  FlowRouter.route('/', {
+    name: 'posts.list',
+    action() {
+      ReactLayout.render(MainLayoutCtx, {
+        content: () => (<PostList />)
+      });
+    }
+  });
 
-FlowRouter.route('/post/:postId', {
-  name: 'posts.single',
-  action({postId}) {
-    ReactLayout.render(MainLayoutCtx, {
-      content: () => (<Post postId={postId}/>)
-    });
-  }
-});
+  FlowRouter.route('/post/:postId', {
+    name: 'posts.single',
+    action({postId}) {
+      ReactLayout.render(MainLayoutCtx, {
+        content: () => (<Post postId={postId}/>)
+      });
+    }
+  });
+};
