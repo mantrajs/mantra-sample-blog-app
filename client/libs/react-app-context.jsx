@@ -1,3 +1,5 @@
+// XXX: Move this into a NPM module
+
 export function applyContext(context, _actions) {
   const actions = {};
   for(var key in _actions) {
@@ -31,7 +33,10 @@ export function applyContext(context, _actions) {
   }
 }
 
-const defaultMapper = (context, actions) => ({context, actions});
+const defaultMapper = (context, actions) => ({
+  context: () => context,
+  actions: () => actions
+});
 
 export function withContext(mapper = defaultMapper) {
   return function(ChildComponent) {
@@ -55,5 +60,16 @@ export function withContext(mapper = defaultMapper) {
     });
 
     return ContextWrapper;
+  }
+}
+
+export function composeAll(...composers) {
+  return function(BaseComponent) {
+    let finalComponent = BaseComponent;
+    composers.forEach(composer => {
+      finalComponent = composer(finalComponent);
+    });
+
+    return finalComponent;
   }
 }

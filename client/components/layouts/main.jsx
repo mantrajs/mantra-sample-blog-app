@@ -1,7 +1,7 @@
-const Layout = ({content}) => (
+const Layout = ({content = () => null }) => (
   <div>
     <header>
-    <h1>My Blog Post</h1>
+    <h1>Mantra Voice</h1>
     </header>
 
     <div>
@@ -9,7 +9,7 @@ const Layout = ({content}) => (
     </div>
 
     <footer>
-    <small>Thank you for reading my blog.</small>
+    <small>Mantra is an application architecture for Meteor.</small>
     </footer>
   </div>
 );
