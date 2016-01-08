@@ -5,6 +5,7 @@ import actions from '../actions';
 import MainLayout from '../components/layouts/main.jsx';
 import PostList from '../containers/postlist';
 import Post from '../containers/post';
+import NewPost from '../containers/newpost';
 
 const MainLayoutCtx = applyContext(context, actions)(MainLayout);
 
@@ -24,6 +25,15 @@ export const initRoutes = () => {
     action({postId}) {
       ReactLayout.render(MainLayoutCtx, {
         content: () => (<Post postId={postId}/>)
+      });
+    }
+  });
+
+  FlowRouter.route('/new-post', {
+    name: 'newpost',
+    action() {
+      ReactLayout.render(MainLayoutCtx, {
+        content: () => (<NewPost/>)
       });
     }
   });

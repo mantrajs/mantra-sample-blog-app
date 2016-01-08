@@ -1,9 +1,8 @@
 import Collections from '../../libs/collections';
 
 export default {
-  name: 'arunoda',
   Meteor,
   FlowRouter,
+  Collections,
   LocalState: new ReactiveDict(),
-  Collections
 };

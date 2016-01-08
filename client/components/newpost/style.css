@@ -1,0 +1,13 @@
+.new-post input,
+.new-post textarea {
+  width: 350px;
+  padding: 5px 8px;
+  outline: 0;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.new-post textarea {
+  height: 200px;
+}
