@@ -5,10 +5,11 @@
     "react-komposer": "1.x.x"
   },
   "devDependencies": {
-    "eslint": "1.10.x"
+    "eslint": "1.10.x",
+    "eslint-plugin-react": "3.14.x"
   },
   "scripts": {
-    "lint": "eslint ./libs ./client ./server"
+    "lint": "eslint ./libs ./client ./server --ext .js --ext .jsx"
   },
   "private": true
 }
