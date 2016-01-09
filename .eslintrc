@@ -72,7 +72,6 @@
     "new-cap": 0,
     "new-parens": 2,
     "newline-after-var": 0,
-    "no-alert": 2,
     "no-array-constructor": 2,
     "no-bitwise": 0,
     "no-caller": 2,
