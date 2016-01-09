@@ -63,14 +63,3 @@ export function withContext(mapper = defaultMapper) {
     return ContextWrapper;
   };
 }
-
-export function composeAll(...composers) {
-  return function (BaseComponent) {
-    let finalComponent = BaseComponent;
-    composers.forEach(composer => {
-      finalComponent = composer(finalComponent);
-    });
-
-    return finalComponent;
-  };
-}

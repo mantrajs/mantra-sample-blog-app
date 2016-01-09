@@ -1,6 +1,6 @@
 import Post from '../components/post/index.jsx';
-import {withContext, composeAll} from '../libs/react-app-context.jsx';
-import {composeWithTracker} from 'react-komposer';
+import {withContext} from '../libs/react-app-context.jsx';
+import {composeWithTracker, composeAll} from 'react-komposer';
 
 export const composerFn = ({context, postId}, onData) => {
   const {Meteor, Collections} = context();
