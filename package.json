@@ -2,7 +2,13 @@
   "name": "mantra-demo",
   "version": "0.0.0",
   "dependencies": {
-  
+    "react-komposer": "1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "1.10.x"
+  },
+  "scripts": {
+    "lint": "eslint ./libs ./client ./server"
   },
   "private": true
 }

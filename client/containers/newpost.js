@@ -1,6 +1,6 @@
 import NewPost from '../components/newpost/index.jsx';
 import {withContext, composeAll} from '../libs/react-app-context.jsx';
-const {composeWithTracker} = ReactKomposer;
+import {composeWithTracker} from 'react-komposer';
 
 export const composerFn = ({context, clearErrors}, onData) => {
   const {LocalState} = context();

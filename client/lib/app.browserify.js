@@ -1,1 +1,0 @@
-ReactKomposer = require('react-komposer');

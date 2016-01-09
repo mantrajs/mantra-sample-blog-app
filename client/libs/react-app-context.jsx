@@ -1,16 +1,17 @@
 // XXX: Move this into a NPM module
+import {React} from 'meteor/react-runtime';
 
 export function applyContext(context, _actions) {
   const actions = {};
-  for(var key in _actions) {
+  for (var key in _actions) {
     const actionMap = _actions[key];
-    for(var actionName in actionMap) {
+    for (var actionName in actionMap) {
       actionMap[actionName] = actionMap[actionName].bind(null, context);
     }
     actions[key] = actionMap;
   }
 
-  return function(ChildComponent) {
+  return function (ChildComponent) {
     const Context = React.createClass({
       childContextTypes: {
         context: React.PropTypes.object,
@@ -21,16 +22,16 @@ export function applyContext(context, _actions) {
         return {
           context,
           actions
-        }
+        };
       },
 
       render() {
-        return (<ChildComponent {...this.props} />)
+        return (<ChildComponent {...this.props} />);
       }
     });
 
     return Context;
-  }
+  };
 }
 
 const defaultMapper = (context, actions) => ({
@@ -39,7 +40,7 @@ const defaultMapper = (context, actions) => ({
 });
 
 export function withContext(mapper = defaultMapper) {
-  return function(ChildComponent) {
+  return function (ChildComponent) {
     const ContextWrapper = React.createClass({
       render() {
         const {context, actions} = this.context;
@@ -60,16 +61,16 @@ export function withContext(mapper = defaultMapper) {
     });
 
     return ContextWrapper;
-  }
+  };
 }
 
 export function composeAll(...composers) {
-  return function(BaseComponent) {
+  return function (BaseComponent) {
     let finalComponent = BaseComponent;
     composers.forEach(composer => {
       finalComponent = composer(finalComponent);
     });
 
     return finalComponent;
-  }
+  };
 }

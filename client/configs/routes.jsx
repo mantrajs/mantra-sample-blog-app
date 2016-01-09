@@ -2,6 +2,9 @@ import {applyContext, withContext} from '../libs/react-app-context.jsx';
 import context from './context';
 import actions from '../actions';
 
+import {FlowRouter} from 'meteor/kadira:flow-router';
+import {ReactLayout} from 'meteor/kadira:react-layout';
+
 import MainLayout from '../components/layouts/main.jsx';
 import PostList from '../containers/postlist';
 import Post from '../containers/post';

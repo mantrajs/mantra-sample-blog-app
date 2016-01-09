@@ -1,4 +1,6 @@
-import {Posts} from '../../libs/collections';
+import {Posts} from '/libs/collections';
+import {Meteor} from 'meteor/meteor';
+import {check} from 'meteor/check';
 
 Meteor.methods({
   'posts.create': (_id, title, content) => {
