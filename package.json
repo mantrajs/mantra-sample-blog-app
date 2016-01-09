@@ -2,7 +2,9 @@
   "name": "mantra-demo",
   "version": "0.0.0",
   "dependencies": {
-  
+  },
+  "devDependencies": {
+    "eslint": "1.10.x"
   },
   "private": true
 }

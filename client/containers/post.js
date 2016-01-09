@@ -4,7 +4,7 @@ const {composeWithTracker} = ReactKomposer;
 
 export const composerFn = ({context, postId}, onData) => {
   const {Meteor, Collections} = context();
-  if(Meteor.subscribe('posts.single', postId).ready()) {
+  if (Meteor.subscribe('posts.single', postId).ready()) {
     const post = Collections.Posts.findOne(postId);
     onData(null, {post});
   } else {

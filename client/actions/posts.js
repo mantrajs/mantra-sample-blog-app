@@ -10,7 +10,7 @@ export default {
     const id = Random.id();
     Meteor.call('posts.create', id, title, content, (err) => {
       LocalState.set('SAVING_NEW_POST', false);
-      if(err) {
+      if (err) {
         return alert(err.message);
       }
       FlowRouter.go(`/post/${id}`);
