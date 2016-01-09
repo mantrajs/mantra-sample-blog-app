@@ -1,6 +1,6 @@
 import PostList from '../components/postlist/index.jsx';
 import {withContext, composeAll} from '../libs/react-app-context.jsx';
-const {composeWithTracker} = ReactKomposer;
+import {composeWithTracker} from 'react-komposer';
 
 export const composerFn = ({context}, onData) => {
   const {Meteor, Collections} = context();

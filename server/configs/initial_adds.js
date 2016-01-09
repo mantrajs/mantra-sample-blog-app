@@ -1,4 +1,4 @@
-import {Posts} from '/app/libs/collections';
+import {Posts} from '/libs/collections';
 
 export default function () {
   if (!Posts.findOne()) {

@@ -1,3 +1,6 @@
+import {FlowRouter} from 'meteor/kadira:flow-router';
+import {Random} from 'meteor/random';
+
 export default {
   create({Meteor, LocalState}, title, content) {
     if (!title || !content) {
