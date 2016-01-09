@@ -3,12 +3,16 @@ import {React} from 'meteor/react-runtime';
 
 export function applyContext(context, _actions) {
   const actions = {};
-  for (var key in _actions) {
-    const actionMap = _actions[key];
-    for (var actionName in actionMap) {
-      actionMap[actionName] = actionMap[actionName].bind(null, context);
+  for (let key in _actions) {
+    if (_actions.hasOwnProperty(key)) {
+      const actionMap = _actions[key];
+      for (let actionName in actionMap) {
+        if (actionMap.hasOwnProperty(actionName)) {
+          actionMap[actionName] = actionMap[actionName].bind(null, context);
+        }
+      }
+      actions[key] = actionMap;
     }
-    actions[key] = actionMap;
   }
 
   return function (ChildComponent) {

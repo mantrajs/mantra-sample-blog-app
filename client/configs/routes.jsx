@@ -1,4 +1,4 @@
-import {applyContext, withContext} from '../libs/react-app-context.jsx';
+import {applyContext} from '../libs/react-app-context.jsx';
 import context from './context';
 import actions from '../actions';
 
