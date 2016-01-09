@@ -1,4 +1,4 @@
-import {Posts} from '../../libs/collections';
+import {Posts} from '/app/libs/collections';
 
 Meteor.publish('posts.list', () => {
   const selector = {};
