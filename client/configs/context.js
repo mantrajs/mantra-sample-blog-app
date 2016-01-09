@@ -1,4 +1,4 @@
-import Collections from '../../libs/collections';
+import Collections from '/app/libs/collections';
 
 export default {
   Meteor,

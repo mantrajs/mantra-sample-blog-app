@@ -155,7 +155,7 @@
       }
     },
     "react": {
-      "version": "0.14.5",
+      "version": "0.14.6",
       "dependencies": {
         "envify": {
           "version": "3.4.0",
@@ -185,7 +185,7 @@
           }
         },
         "fbjs": {
-          "version": "0.6.0",
+          "version": "0.6.1",
           "dependencies": {
             "core-js": {
               "version": "1.2.6"
