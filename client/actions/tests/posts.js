@@ -28,7 +28,7 @@ describe('actions.posts', () => {
       const LocalState = {set: spy()};
 
       actions.create({LocalState, Meteor}, 't', 'c');
-      expect(LocalState.set.args[0]).to.deep.equal(['SAVING_ERROR', null]);
+      expect(LocalState.set.args[0]).to.deep.equal([ 'SAVING_ERROR', null ]);
     });
 
     it('should set LocalState SAVING_NEW_POST to true', () => {
@@ -36,7 +36,7 @@ describe('actions.posts', () => {
       const LocalState = {set: spy()};
 
       actions.create({LocalState, Meteor}, 't', 'c');
-      expect(LocalState.set.args[1]).to.deep.equal(['SAVING_NEW_POST', true]);
+      expect(LocalState.set.args[1]).to.deep.equal([ 'SAVING_NEW_POST', true ]);
     });
 
     it('should call Meteor.call to save the post', () => {
@@ -45,13 +45,13 @@ describe('actions.posts', () => {
 
       actions.create({LocalState, Meteor}, 't', 'c');
       const methodArgs = Meteor.call.args[0];
-      
+
       expect(methodArgs.slice(0, 4)).to.deep.equal([
         'posts.create', 'id', 't', 'c'
       ]);
       expect(methodArgs[4]).to.be.a('function');
     });
-    
+
     describe('after Meteor.call', () => {
       it('should set SAVING_NEW_POST to false', () => {
         const Meteor = {uuid: () => 'id', call: stub()};
@@ -60,7 +60,7 @@ describe('actions.posts', () => {
         Meteor.call.callsArg(4);
 
         actions.create({Meteor, LocalState, FlowRouter}, 't', 'c');
-        expect(LocalState.set.args[2]).to.deep.equal(['SAVING_NEW_POST', false]);
+        expect(LocalState.set.args[2]).to.deep.equal([ 'SAVING_NEW_POST', false ]);
       });
 
       describe('if there is error', () => {
@@ -72,7 +72,7 @@ describe('actions.posts', () => {
           Meteor.call.callsArgWith(4, err);
 
           actions.create({Meteor, LocalState, FlowRouter}, 't', 'c');
-          expect(LocalState.set.args[3]).to.deep.equal(['SAVING_ERROR', err.message]);
+          expect(LocalState.set.args[3]).to.deep.equal([ 'SAVING_ERROR', err.message ]);
         });
       });
 
@@ -96,7 +96,7 @@ describe('actions.posts', () => {
       const LocalState = {set: spy()};
       actions.clearErrors({LocalState});
       expect(LocalState.set.callCount).to.be.equal(1);
-      expect(LocalState.set.args[0]).to.deep.equal(['SAVING_ERROR', null]);
+      expect(LocalState.set.args[0]).to.deep.equal([ 'SAVING_ERROR', null ]);
     });
   });
 });
