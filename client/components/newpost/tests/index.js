@@ -16,8 +16,7 @@ describe('components.newpost', () => {
   });
 
   it('should display the create post form', () => {
-    const create = () => {};
-    const el = shallow(<NewPost  />);
+    const el = shallow(<NewPost />);
     const title = el.find('input').first();
     const content = el.find('textarea').first();
     const button = el.find('button').first();
