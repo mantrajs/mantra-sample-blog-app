@@ -2,7 +2,7 @@ import Post from '../components/post/index.jsx';
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 
-export const composerFn = ({context, postId}, onData) => {
+export const composer = ({context, postId}, onData) => {
   const {Meteor, Collections} = context();
   if (Meteor.subscribe('posts.single', postId).ready()) {
     const post = Collections.Posts.findOne(postId);
@@ -13,6 +13,6 @@ export const composerFn = ({context, postId}, onData) => {
 };
 
 export default composeAll(
-  composeWithTracker(composerFn),
+  composeWithTracker(composer),
   useDeps()
 )(Post);
