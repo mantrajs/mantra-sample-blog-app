@@ -1,4 +1,4 @@
-import {React} from 'meteor/react-runtime';
+import React from 'react';
 
 class NewPost extends React.Component {
   render() {
@@ -11,12 +11,12 @@ class NewPost extends React.Component {
 
         <input ref="titleRef" type="Text" placeholder="Enter your post title." /> <br/>
         <textarea ref="contentRef" placeholder="Enter your post content." /> <br/>
-        <button onClick={this.create.bind(this)}>Add New</button>
+        <button onClick={this.createPost.bind(this)}>Add New</button>
       </div>
     );
   }
 
-  create() {
+  createPost() {
     const {create} = this.props;
     const {titleRef, contentRef} = this.refs;
 
