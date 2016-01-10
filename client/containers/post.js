@@ -1,5 +1,5 @@
 import Post from '../components/post/index.jsx';
-import {withContext} from '../libs/react-app-context.jsx';
+import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 
 export const composerFn = ({context, postId}, onData) => {
@@ -14,5 +14,5 @@ export const composerFn = ({context, postId}, onData) => {
 
 export default composeAll(
   composeWithTracker(composerFn),
-  withContext()
+  useDeps()
 )(Post);

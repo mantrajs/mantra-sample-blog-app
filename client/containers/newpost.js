@@ -1,5 +1,5 @@
 import NewPost from '../components/newpost/index.jsx';
-import {withContext} from '../libs/react-app-context.jsx';
+import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 
 export const composerFn = ({context, clearErrors}, onData) => {
@@ -20,5 +20,5 @@ export const bindPropsFn = (context, actions) => ({
 
 export default composeAll(
   composeWithTracker(composerFn),
-  withContext(bindPropsFn)
+  useDeps(bindPropsFn)
 )(NewPost);

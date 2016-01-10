@@ -2,7 +2,8 @@
   "name": "mantra-demo",
   "version": "0.0.0",
   "dependencies": {
-    "react-komposer": "1.x.x"
+    "react-komposer": "1.x.x",
+    "react-simple-di": "1.x.x"
   },
   "devDependencies": {
     "eslint": "1.10.x",

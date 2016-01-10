@@ -1,5 +1,5 @@
 import PostList from '../components/postlist/index.jsx';
-import {withContext} from '../libs/react-app-context.jsx';
+import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 
 export const composerFn = ({context}, onData) => {
@@ -12,5 +12,5 @@ export const composerFn = ({context}, onData) => {
 
 export default composeAll(
   composeWithTracker(composerFn),
-  withContext()
+  useDeps()
 )(PostList);
