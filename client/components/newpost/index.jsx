@@ -1,4 +1,7 @@
-import React from 'react';
+// XXX: We need to find a way to use npm's react
+// Otherwise, we can't run tests properly.
+import {React} from 'meteor/react-runtime';
+// import React from 'react';
 
 class NewPost extends React.Component {
   render() {
