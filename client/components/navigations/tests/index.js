@@ -11,7 +11,7 @@ describe('components.navigations', () => {
     expect(homeLink.prop('href')).to.be.equal('/');
   });
 
-  it('shallow contain a link to create a new post', () => {
+  it('should contain a link to create a new post', () => {
     const el = shallow(<Navigations />);
     const newPostLink = el.find('a').at(1);
     expect(newPostLink.text()).to.be.equal('New Post');

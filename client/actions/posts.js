@@ -1,8 +1,5 @@
-import {FlowRouter} from 'meteor/kadira:flow-router';
-import {Random} from 'meteor/random';
-
 export default {
-  create({Meteor, LocalState}, title, content) {
+  create({Meteor, LocalState, FlowRouter}, title, content) {
     if (!title || !content) {
       return LocalState.set('SAVING_ERROR', 'Title & Content are required!');
     }
@@ -10,11 +7,11 @@ export default {
     LocalState.set('SAVING_ERROR', null);
     LocalState.set('SAVING_NEW_POST', true);
 
-    const id = Random.id();
+    const id = Meteor.uuid();
     Meteor.call('posts.create', id, title, content, (err) => {
       LocalState.set('SAVING_NEW_POST', false);
       if (err) {
-        return alert(err.message);
+        return LocalState.set('SAVING_ERROR', err.message);
       }
       FlowRouter.go(`/post/${id}`);
     });

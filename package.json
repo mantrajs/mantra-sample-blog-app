@@ -23,7 +23,8 @@
     "react": "0.14.x",
     "react-dom": "0.14.x",
     "react-addons-test-utils": ">=0.14.3 <=0.15.0",
-    "enzyme": "1.x.x"
+    "enzyme": "1.x.x",
+    "sinon": "1.17.x"
   },
   "dependencies": {
     "react-komposer": "1.x.x",
