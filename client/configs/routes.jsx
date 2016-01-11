@@ -1,6 +1,4 @@
 import {injectDeps} from 'react-simple-di';
-import context from './context';
-import actions from '../actions';
 
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {ReactLayout} from 'meteor/kadira:react-layout';
@@ -10,9 +8,10 @@ import PostList from '../containers/postlist';
 import Post from '../containers/post';
 import NewPost from '../containers/newpost';
 
-const MainLayoutCtx = injectDeps(context, actions)(MainLayout);
 
-export const initRoutes = () => {
+export const initRoutes = (context, actions) => {
+  const MainLayoutCtx = injectDeps(context, actions)(MainLayout);
+
   // Move these as a module and call this from a main file
   FlowRouter.route('/', {
     name: 'posts.list',

@@ -3,9 +3,11 @@ import {Meteor} from 'meteor/meteor';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {ReactiveDict} from 'meteor/reactive-dict';
 
-export default {
-  Meteor,
-  FlowRouter,
-  Collections,
-  LocalState: new ReactiveDict(),
-};
+export function initContext() {
+  return {
+    Meteor,
+    FlowRouter,
+    Collections,
+    LocalState: new ReactiveDict(),
+  };
+}
