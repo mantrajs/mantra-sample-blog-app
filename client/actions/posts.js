@@ -5,16 +5,16 @@ export default {
     }
 
     LocalState.set('SAVING_ERROR', null);
-    LocalState.set('SAVING_NEW_POST', true);
 
     const id = Meteor.uuid();
+    // There is a method stub for this in the config/method_stubs
+    // That's how we are doing latency compensation
     Meteor.call('posts.create', id, title, content, (err) => {
-      LocalState.set('SAVING_NEW_POST', false);
       if (err) {
         return LocalState.set('SAVING_ERROR', err.message);
       }
-      FlowRouter.go(`/post/${id}`);
     });
+    FlowRouter.go(`/post/${id}`);
   },
 
   clearErrors({LocalState}) {

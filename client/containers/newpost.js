@@ -4,9 +4,8 @@ import {composeWithTracker, composeAll} from 'react-komposer';
 
 export const composer = ({context, clearErrors}, onData) => {
   const {LocalState} = context();
-  const saving = Boolean(LocalState.get('SAVING_NEW_POST'));
   const error = LocalState.get('SAVING_ERROR');
-  onData(null, {saving, error});
+  onData(null, {error});
 
   // clearErrors when unmounting the component
   return clearErrors;
