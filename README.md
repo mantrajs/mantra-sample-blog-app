@@ -6,7 +6,7 @@ This is a sample blog app written in [Mantra](https://github.com/kadirahq/mantra
 
 * Clone this repo
 * Do `npm install` to install dependencies
-* Make sure you've install Meteor locally
+* Make sure you've installed Meteor locally
 
 ### Running The App
 
