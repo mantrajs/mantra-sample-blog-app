@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import MainLayout from '../main.jsx';
+import MainLayout from '../index.jsx';
 import Navigations from '../../navigations/index.jsx';
 
 describe('components.layouts.main', () => {

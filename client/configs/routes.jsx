@@ -5,7 +5,7 @@ import actions from '../actions';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {ReactLayout} from 'meteor/kadira:react-layout';
 
-import MainLayout from '../components/layouts/main.jsx';
+import MainLayout from '../components/layouts.main/index.jsx';
 import PostList from '../containers/postlist';
 import Post from '../containers/post';
 import NewPost from '../containers/newpost';
