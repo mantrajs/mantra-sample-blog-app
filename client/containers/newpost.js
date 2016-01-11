@@ -2,7 +2,7 @@ import NewPost from '../components/newpost/index.jsx';
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 
-export const composerFn = ({context, clearErrors}, onData) => {
+export const composer = ({context, clearErrors}, onData) => {
   const {LocalState} = context();
   const saving = Boolean(LocalState.get('SAVING_NEW_POST'));
   const error = LocalState.get('SAVING_ERROR');
@@ -12,13 +12,13 @@ export const composerFn = ({context, clearErrors}, onData) => {
   return clearErrors;
 };
 
-export const bindPropsFn = (context, actions) => ({
+export const depsMapper = (context, actions) => ({
   create: actions.posts.create,
   clearErrors: actions.posts.clearErrors,
   context: () => context
 });
 
 export default composeAll(
-  composeWithTracker(composerFn),
-  useDeps(bindPropsFn)
+  composeWithTracker(composer),
+  useDeps(depsMapper)
 )(NewPost);
