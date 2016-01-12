@@ -26,24 +26,18 @@ describe('actions.posts', () => {
     it('should clear older LocalState for SAVING_ERROR', () => {
       const Meteor = {uuid: spy(), call: spy()};
       const LocalState = {set: spy()};
+      const FlowRouter = {go: spy()};
 
-      actions.create({LocalState, Meteor}, 't', 'c');
+      actions.create({LocalState, Meteor, FlowRouter}, 't', 'c');
       expect(LocalState.set.args[0]).to.deep.equal([ 'SAVING_ERROR', null ]);
-    });
-
-    it('should set LocalState SAVING_NEW_POST to true', () => {
-      const Meteor = {uuid: spy(), call: spy()};
-      const LocalState = {set: spy()};
-
-      actions.create({LocalState, Meteor}, 't', 'c');
-      expect(LocalState.set.args[1]).to.deep.equal([ 'SAVING_NEW_POST', true ]);
     });
 
     it('should call Meteor.call to save the post', () => {
       const Meteor = {uuid: () => 'id', call: spy()};
       const LocalState = {set: spy()};
+      const FlowRouter = {go: spy()};
 
-      actions.create({LocalState, Meteor}, 't', 'c');
+      actions.create({LocalState, Meteor, FlowRouter}, 't', 'c');
       const methodArgs = Meteor.call.args[0];
 
       expect(methodArgs.slice(0, 4)).to.deep.equal([
@@ -52,17 +46,18 @@ describe('actions.posts', () => {
       expect(methodArgs[4]).to.be.a('function');
     });
 
+    it('should redirect user to the post', () => {
+      const id = 'dsds';
+      const Meteor = {uuid: () => id, call: stub()};
+      const LocalState = {set: spy()};
+      const FlowRouter = {go: spy()};
+      Meteor.call.callsArg(4);
+
+      actions.create({Meteor, LocalState, FlowRouter}, 't', 'c');
+      expect(FlowRouter.go.args[0][0]).to.be.equal(`/post/${id}`);
+    });
+
     describe('after Meteor.call', () => {
-      it('should set SAVING_NEW_POST to false', () => {
-        const Meteor = {uuid: () => 'id', call: stub()};
-        const LocalState = {set: spy()};
-        const FlowRouter = {go: spy()};
-        Meteor.call.callsArg(4);
-
-        actions.create({Meteor, LocalState, FlowRouter}, 't', 'c');
-        expect(LocalState.set.args[2]).to.deep.equal([ 'SAVING_NEW_POST', false ]);
-      });
-
       describe('if there is error', () => {
         it('should set SAVING_ERROR with the error message', () => {
           const Meteor = {uuid: () => 'id', call: stub()};
@@ -72,20 +67,7 @@ describe('actions.posts', () => {
           Meteor.call.callsArgWith(4, err);
 
           actions.create({Meteor, LocalState, FlowRouter}, 't', 'c');
-          expect(LocalState.set.args[3]).to.deep.equal([ 'SAVING_ERROR', err.message ]);
-        });
-      });
-
-      describe('if it success', () => {
-        it('should redirect user to the post', () => {
-          const id = 'dsds';
-          const Meteor = {uuid: () => id, call: stub()};
-          const LocalState = {set: spy()};
-          const FlowRouter = {go: spy()};
-          Meteor.call.callsArg(4);
-
-          actions.create({Meteor, LocalState, FlowRouter}, 't', 'c');
-          expect(FlowRouter.go.args[0][0]).to.be.equal(`/post/${id}`);
+          expect(LocalState.set.args[1]).to.deep.equal([ 'SAVING_ERROR', err.message ]);
         });
       });
     });
