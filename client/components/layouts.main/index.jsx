@@ -12,7 +12,7 @@ const Layout = ({content = () => null }) => (
     </div>
 
     <footer>
-    <small>Mantra is an application architecture for Meteor.</small>
+    <small>Built with <a href='https://github.com/kadirahq/mantra'>Mantra</a> & Meteor.</small>
     </footer>
   </div>
 );
