@@ -1,7 +1,7 @@
 const { describe, it } = global;
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import PostList from '../index.jsx';
+import PostList from '../postlist.jsx';
 
 describe('components.postlist', () => {
   const posts = [

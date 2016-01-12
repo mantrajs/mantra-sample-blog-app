@@ -1,4 +1,4 @@
-import NewPost from '../components/newpost/index.jsx';
+import NewPost from '../components/newpost.jsx';
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 

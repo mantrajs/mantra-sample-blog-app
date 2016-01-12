@@ -3,7 +3,7 @@
 // const { describe, it } = global;
 // import {expect} from 'chai';
 // import {shallow} from 'enzyme';
-// import NewPost from '../index.jsx';
+// import NewPost from '../newpost.jsx';
 
 // describe('components.newpost', () => {
 //   it('should show the error if there are any', () => {

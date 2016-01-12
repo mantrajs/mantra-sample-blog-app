@@ -1,4 +1,4 @@
-import Post from '../components/post/index.jsx';
+import Post from '../components/post.jsx';
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 

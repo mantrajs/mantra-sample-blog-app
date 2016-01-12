@@ -1,4 +1,4 @@
-import PostList from '../components/postlist/index.jsx';
+import PostList from '../components/postlist.jsx';
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 

@@ -1,13 +1,19 @@
 .new-post input,
 .new-post textarea {
   width: 350px;
-  padding: 5px 8px;
   outline: 0;
   margin-bottom: 5px;
   border: 1px solid #ddd;
   font-size: 13px;
+  padding: 4px 6px;
 }
 
 .new-post textarea {
   height: 200px;
+}
+
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 5px;
 }
