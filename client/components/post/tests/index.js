@@ -15,4 +15,10 @@ describe('components.post', () => {
     const el = shallow(<Post post={post} />);
     expect(el.find('p').text()).to.be.match(/Nice content/);
   });
+
+  it('should display saving indicator if saving prop is there', () => {
+    const post = {saving: true};
+    const el = shallow(<Post post={post} />);
+    expect(el.find('p').first().text()).to.be.match(/saving/i);
+  });
 });
