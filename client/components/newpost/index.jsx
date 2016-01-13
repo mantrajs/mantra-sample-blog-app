@@ -2,7 +2,7 @@
 // Otherwise, we can't run tests properly.
 // To test this component, use React from npm directly
 // as shown below
-import {React} from 'meteor/react-runtime';
+import React from 'react';
 // import React from 'react';
 
 class NewPost extends React.Component {

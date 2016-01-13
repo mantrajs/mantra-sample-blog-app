@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Post = ({post}) => (
   <div>
     {post.saving ? <p>Saving...</p> : null}

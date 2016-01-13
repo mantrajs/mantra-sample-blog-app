@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Navigations = () => (
   <div>
     <b> Navigations: </b>
