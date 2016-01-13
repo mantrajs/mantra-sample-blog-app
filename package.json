@@ -30,7 +30,8 @@
     "react": "0.14.x",
     "react-dom": "0.14.x",
     "react-komposer": "1.x.x",
-    "react-simple-di": "1.x.x"
+    "react-simple-di": "1.x.x",
+    "react-mounter": "1.x.x"
   },
   "private": true
 }
