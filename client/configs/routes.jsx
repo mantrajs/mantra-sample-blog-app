@@ -1,13 +1,12 @@
+import React from 'react';
 import {injectDeps} from 'react-simple-di';
-
 import {FlowRouter} from 'meteor/kadira:flow-router';
-import {ReactLayout} from 'meteor/kadira:react-layout';
+import {mount} from 'react-mounter';
 
 import MainLayout from '../components/layouts.main/index.jsx';
 import PostList from '../containers/postlist';
 import Post from '../containers/post';
 import NewPost from '../containers/newpost';
-
 
 export const initRoutes = (context, actions) => {
   const MainLayoutCtx = injectDeps(context, actions)(MainLayout);
@@ -16,7 +15,7 @@ export const initRoutes = (context, actions) => {
   FlowRouter.route('/', {
     name: 'posts.list',
     action() {
-      ReactLayout.render(MainLayoutCtx, {
+      mount(MainLayoutCtx, {
         content: () => (<PostList />)
       });
     }
@@ -25,7 +24,7 @@ export const initRoutes = (context, actions) => {
   FlowRouter.route('/post/:postId', {
     name: 'posts.single',
     action({postId}) {
-      ReactLayout.render(MainLayoutCtx, {
+      mount(MainLayoutCtx, {
         content: () => (<Post postId={postId}/>)
       });
     }
@@ -34,7 +33,7 @@ export const initRoutes = (context, actions) => {
   FlowRouter.route('/new-post', {
     name: 'newpost',
     action() {
-      ReactLayout.render(MainLayoutCtx, {
+      mount(MainLayoutCtx, {
         content: () => (<NewPost/>)
       });
     }
