@@ -8,7 +8,8 @@
     "lint": "eslint ./libs ./client ./server --ext .js --ext .jsx",
     "lintfix": "npm run lint -- --fix",
     "testonly": "mocha $npm_package_options_mocha",
-    "test": "npm run lint && npm run testonly"
+    "test": "npm run lint && npm run testonly",
+    "watch-tests": "mocha $npm_package_options_mocha --watch"
   },
   "devDependencies": {
     "eslint": "1.10.x",

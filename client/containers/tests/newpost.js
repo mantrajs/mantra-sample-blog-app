@@ -1,6 +1,6 @@
 // We need require React from NPM before working on these tests
 
-// import {describe, it} from 'mocha';
+// const { describe, it } = global;
 // import {expect} from 'chai';
 // import {stub, spy} from 'sinon';
 // import {composer, depsMapper} from '../newpost';
