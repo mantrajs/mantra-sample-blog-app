@@ -1,6 +1,6 @@
 // See: ../index.js for more information
 
-// const { describe, it } = global
+// const { describe, it } = global;
 // import {expect} from 'chai';
 // import {shallow} from 'enzyme';
 // import NewPost from '../index.jsx';

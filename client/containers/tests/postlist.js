@@ -1,4 +1,4 @@
-const { describe, it } = global
+const { describe, it } = global;
 import {expect} from 'chai';
 import {stub, spy} from 'sinon';
 import {composer} from '../postlist';
