@@ -16,7 +16,7 @@ describe('actions.posts', () => {
 
     it('should reject if content is not there', () => {
       const LocalState = {set: spy()};
-      actions.create({LocalState}, null, 'content');
+      actions.create({LocalState}, 'title', null);
       const args = LocalState.set.args[0];
 
       expect(args[0]).to.be.equal('SAVING_ERROR');
