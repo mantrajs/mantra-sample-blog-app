@@ -1,4 +1,4 @@
-import {Posts} from '/libs/collections';
+import {Posts, Comments} from '/libs/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
@@ -29,7 +29,7 @@ Meteor.methods({
 
     // XXX: Do some user authorization
     const createdAt = new Date();
-    const author = "The User";
+    const author = 'The User';
     const comment = {_id, postId, author, text, createdAt};
     Comments.insert(comment);
   }
