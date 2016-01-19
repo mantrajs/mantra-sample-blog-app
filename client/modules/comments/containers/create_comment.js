@@ -10,7 +10,7 @@ export const composer = ({context}, onData) => {
 };
 
 export const depsMapper = (context) => ({
-  create: actions.comments.create.bind(null, context),
+  create: actions.comments.create,
   context: () => context
 });
 
