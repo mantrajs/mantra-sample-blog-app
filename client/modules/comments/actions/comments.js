@@ -9,7 +9,7 @@ export default {
     const id = Meteor.uuid();
     Meteor.call('posts.createComment', id, postId, text, (err) => {
       if (err) {
-        console.log(`Post creating failed: ${err.message}`);
+        alert(`Post creating failed: ${err.message}`);
       }
     });
   }

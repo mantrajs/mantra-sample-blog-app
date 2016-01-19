@@ -6,7 +6,7 @@ class CreateComment extends React.Component {
     return (
       <div>
         <b>Create a new comment:</b>
-        {error? <p style={{color: 'red'}}>{error}</p> : null}
+        {error ? <p style={{color: 'red'}}>{error}</p> : null}
         <br />
         <textarea ref='text' placeholder='Enter your comment here.'>
 

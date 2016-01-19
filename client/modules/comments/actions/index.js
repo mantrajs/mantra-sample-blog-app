@@ -5,10 +5,18 @@ const actions = {
 };
 
 export const bindToContext = context => {
-  for (var actionType in actions) {
+  for (let actionType in actions) {
+    if (!actions.hasOwnProperty(actionType)) {
+      continue;
+    }
+
     const actionMap = actions[actionType];
     const newActionMap = {};
-    for (var actionName in actionMap) {
+    for (let actionName in actionMap) {
+      if (!actionMap.hasOwnProperty(actionName)) {
+        continue;
+      }
+
       const action = actionMap[actionName];
       newActionMap[actionName] = action.bind(null, context);
     }
