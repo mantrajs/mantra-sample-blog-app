@@ -1,4 +1,4 @@
-import {Posts} from '/libs/collections';
+import {Posts} from '/imports/configs/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
