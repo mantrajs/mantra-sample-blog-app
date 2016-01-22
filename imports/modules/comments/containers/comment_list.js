@@ -1,6 +1,7 @@
+import {
+  useDeps, composeWithTracker, composeAll
+} from '/imports/libs/mantra';
 import Component from '../components/comment_list.jsx';
-import {useDeps} from 'react-simple-di';
-import {composeWithTracker, composeAll} from 'react-komposer';
 
 export const composer = ({context, clearErrors, postId}, onData) => {
   const {Meteor, Collections} = context();

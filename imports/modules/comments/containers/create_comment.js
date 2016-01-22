@@ -1,6 +1,7 @@
+import {
+  useDeps, composeWithTracker, composeAll
+} from '/imports/libs/mantra';
 import Component from '../components/create_comment.jsx';
-import {useDeps} from 'react-simple-di';
-import {composeAll, composeWithTracker} from 'react-komposer';
 
 export const composer = ({context}, onData) => {
   const {LocalState} = context();
