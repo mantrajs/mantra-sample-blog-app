@@ -7,7 +7,7 @@ import PostList from '../containers/postlist';
 import Post from '../containers/post';
 import NewPost from '../containers/newpost';
 
-export default function(injectDeps) {
+export default function (injectDeps) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
   // Move these as a module and call this from a main file
@@ -37,4 +37,4 @@ export default function(injectDeps) {
       });
     }
   });
-};
+}

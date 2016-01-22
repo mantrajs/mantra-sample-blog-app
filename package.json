@@ -2,10 +2,10 @@
   "name": "mantra-demo",
   "version": "0.0.0",
   "options": {
-    "mocha": "--require .scripts/mocha_runner client/**/tests/**/*.js"
+    "mocha": "--require .scripts/mocha_runner imports/**/tests/**/*.js"
   },
   "scripts": {
-    "lint": "eslint ./libs ./client ./server --ext .js --ext .jsx",
+    "lint": "eslint ./libs ./client ./server ./imports --ext .js --ext .jsx",
     "lintfix": "npm run lint -- --fix",
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
