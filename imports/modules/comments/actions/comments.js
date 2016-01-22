@@ -12,5 +12,9 @@ export default {
         alert(`Post creating failed: ${err.message}`);
       }
     });
+  },
+
+  clearErrors({LocalState}) {
+    return LocalState.set('CREATE_COMMENT_ERROR', null);
   }
 };
