@@ -1,6 +1,6 @@
 import {
   useDeps, composeWithTracker, composeAll
-} from '/imports/libs/mantra';
+} from '../../../libs/mantra';
 import Component from '../components/comment_list.jsx';
 
 export const composer = ({context, clearErrors, postId}, onData) => {
