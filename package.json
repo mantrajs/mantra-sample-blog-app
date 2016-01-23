@@ -9,7 +9,7 @@
     "lintfix": "npm run lint -- --fix",
     "testonly": "mocha imports/**/tests/**/*.js --compilers js:babel-core/register",
     "test": "npm run lint && npm run testonly",
-    "watch-test": "npm run testonly -- --watch"
+    "test-watch": "npm run testonly -- --watch"
   },
   "devDependencies": {
     "babel-core": "6.x.x",
