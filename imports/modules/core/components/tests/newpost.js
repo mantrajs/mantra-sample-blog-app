@@ -1,51 +1,44 @@
-// See: ../index.js for more information
+const { describe, it } = global;
+import {expect} from 'chai';
+import {shallow} from 'enzyme';
+import NewPost from '../newpost.jsx';
 
-// const { describe, it } = global;
-// import {expect} from 'chai';
-// import {shallow} from 'enzyme';
-// import NewPost from '../newpost.jsx';
+describe('components.newpost', () => {
+  it('should show the error if there are any', () => {
+    const error = 'TheError';
+    const el = shallow(<NewPost error={error} />);
+    expect(el.html()).to.match(/TheError/);
+  });
 
-// describe('components.newpost', () => {
-//   it('should show the error if there are any', () => {
-//     const error = 'TheError';
-//     const el = shallow(<NewPost error={error} />);
-//     expect(el.html()).to.match(/TheError/);
-//   });
+  it('should display the create post form', () => {
+    const el = shallow(<NewPost />);
+    const title = el.find('input').first();
+    const content = el.find('textarea').first();
+    const button = el.find('button').first();
 
-//   it('should show the saving indicator, it post is saving', () => {
-//     const el = shallow(<NewPost saving={true} />);
-//     expect(el.html()).to.match(/Saving/);
-//   });
+    expect(title.node.ref).to.be.equal('titleRef');
+    expect(content.node.ref).to.be.equal('contentRef');
+    expect(button.prop('onClick')).to.be.a('function');
+  });
 
-//   it('should display the create post form', () => {
-//     const el = shallow(<NewPost />);
-//     const title = el.find('input').first();
-//     const content = el.find('textarea').first();
-//     const button = el.find('button').first();
+  it('should create a new post when click on the button', done => {
+    const title = 'the-title';
+    const content = 'the-content';
 
-//     expect(title.node.ref).to.be.equal('titleRef');
-//     expect(content.node.ref).to.be.equal('contentRef');
-//     expect(button.prop('onClick')).to.be.a('function');
-//   });
+    const onCreate = (t, c) => {
+      expect(t).to.be.equal(title);
+      expect(c).to.be.equal(content);
+      done();
+    };
 
-//   it('should create a new post when click on the button', done => {
-//     const title = 'the-title';
-//     const content = 'the-content';
+    const el = shallow(<NewPost create={onCreate} />);
+    const instance = el.instance();
 
-//     const onCreate = (t, c) => {
-//       expect(t).to.be.equal(title);
-//       expect(c).to.be.equal(content);
-//       done();
-//     };
+    instance.refs = {
+      titleRef: {value: title},
+      contentRef: {value: content}
+    };
 
-//     const el = shallow(<NewPost create={onCreate} />);
-//     const instance = el.instance();
-
-//     instance.refs = {
-//       titleRef: {value: title},
-//       contentRef: {value: content}
-//     };
-
-//     el.find('button').simulate('click');
-//   });
-// });
+    el.find('button').simulate('click');
+  });
+});
