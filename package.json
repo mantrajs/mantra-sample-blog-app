@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "domready": "^1.0.8",
-    "react": "0.14.x",
-    "react-dom": "0.14.x",
+    "react": ">=0.14.3 <=0.15.0",
+    "react-dom": ">=0.14.3 <=0.15.0",
     "react-komposer": "1.x.x",
     "react-simple-di": "1.x.x",
     "react-mounter": "1.x.x"
