@@ -5,9 +5,7 @@ class CreateComment extends React.Component {
     const {error} = this.props;
     return (
       <div>
-        <b>Create a new comment:</b>
-        {error ? <p style={{color: 'red'}}>{error}</p> : null}
-        <br />
+        {error ? this._renderError(error) : null}
         <textarea ref='text' placeholder='Enter your comment here.'>
 
         </textarea>
@@ -22,6 +20,14 @@ class CreateComment extends React.Component {
     const {create, postId} = this.props;
     create(postId, text);
     this.refs.text.value = '';
+  }
+
+  _renderError(error) {
+    return (
+      <div className='error'>
+        {error}
+      </div>
+    );
   }
 }
 
