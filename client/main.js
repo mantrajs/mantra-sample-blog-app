@@ -1,9 +1,9 @@
-import {initContext} from '/imports/configs/context';
-import routes from '/imports/configs/routes.jsx';
-import {createApp} from '/imports/libs/mantra';
+import {initContext} from './configs/context';
+import routes from './configs/routes.jsx';
+import {createApp} from './libs/mantra';
 
-import coreModule from '/imports/modules/core';
-import commentsModule from '/imports/modules/comments';
+import coreModule from './modules/core';
+import commentsModule from './modules/comments';
 
 const context = initContext();
 
