@@ -16,6 +16,14 @@ footer {
   font-size: 12px;
 }
 
+.postlist li {
+  margin: 8px 0;
+}
+
+.postlist li a {
+  text-decoration: none;
+}
+
 .new-post input,
 .new-post textarea {
   width: 350px;

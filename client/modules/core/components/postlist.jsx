@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PostList = ({posts}) => (
-  <div>
+  <div className='postlist'>
     <ul>
       {posts.map(post => (
         <li key={post._id}>
