@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Navigations = () => (
+const Navigation = () => (
   <div>
-    <b> Navigations: </b>
+    <b> Navigation: </b>
     <a href="/">Home</a> |
     <a href="/new-post">New Post</a>
   </div>
 );
 
-export default Navigations;
+export default Navigation;
