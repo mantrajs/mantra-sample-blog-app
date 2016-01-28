@@ -2,20 +2,20 @@ const { describe, it } = global;
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import MainLayout from '../index.jsx';
-import Navigations from '../../navigations/index.jsx';
+import Navigation from '../../navigation/index.jsx';
 
 describe('components.layouts.main', () => {
-  it('should contain navigations', () => {
+  it('should contain navigation', () => {
     const el = shallow(<MainLayout />);
-    expect(el.contains(Navigations)).to.be.equal(true);
+    expect(el.contains(Navigation)).to.be.equal(true);
   });
 
   it('should render childrens', () => {
     const Comp = () => (<p>Hello</p>);
     const el = shallow(
-      <Navigations>
+      <Navigation>
         <Comp />
-      </Navigations>
+      </Navigation>
     );
 
     expect(el.contains(Comp)).to.be.equal(true);
