@@ -1,6 +1,6 @@
 import {
   useDeps, composeWithTracker, composeAll
-} from '/client/libs/mantra';
+} from 'mantra-core';
 import Component from '../components/create_comment.jsx';
 
 export const composer = ({context, clearErrors}, onData) => {

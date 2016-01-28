@@ -21,16 +21,15 @@
     "eslint": "1.10.x",
     "eslint-plugin-react": "3.15.x",
     "mocha": "2.x.x",
-    "react-addons-test-utils": ">=0.14.3 <=0.15.0",
+    "react-addons-test-utils": "^0.14.6",
     "sinon": "1.17.x"
   },
   "dependencies": {
     "domready": "^1.0.8",
-    "react": ">=0.14.3 <=0.15.0",
-    "react-dom": ">=0.14.3 <=0.15.0",
-    "react-komposer": "1.x.x",
-    "react-simple-di": "1.x.x",
-    "react-mounter": "1.x.x"
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "mantra-core": "^1.1.0",
+    "react-mounter": "^1.0.0"
   },
   "private": true
 }
