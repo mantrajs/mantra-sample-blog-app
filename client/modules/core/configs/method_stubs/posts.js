@@ -1,8 +1,6 @@
-import {Posts} from '/lib/collections';
-import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
-export default function () {
+export default function ({Meteor, Collections}) {
   Meteor.methods({
     'posts.create'(_id, title, content) {
       check(_id, String);
@@ -14,7 +12,8 @@ export default function () {
         _id, title, content, createdAt,
         saving: true
       };
-      Posts.insert(post);
+
+      Collections.Posts.insert(post);
     }
   });
 }

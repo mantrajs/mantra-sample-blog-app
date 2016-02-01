@@ -28,7 +28,7 @@
     "domready": "^1.0.8",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "mantra-core": "^1.1.0",
+    "mantra-core": "^1.2.0",
     "react-mounter": "^1.0.0"
   },
   "private": true
