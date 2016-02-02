@@ -10,7 +10,6 @@ import NewPost from '/client/modules/core/containers/newpost';
 export default function (injectDeps) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  // Move these as a module and call this from a main file
   FlowRouter.route('/', {
     name: 'posts.list',
     action() {
