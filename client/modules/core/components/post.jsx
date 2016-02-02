@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentList from '/client/modules/comments/containers/comment_list.js';
+import CommentList from '../../comments/containers/comment_list.js';
 
 const Post = ({post}) => (
   <div>

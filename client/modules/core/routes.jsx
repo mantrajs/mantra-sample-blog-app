@@ -2,10 +2,10 @@ import React from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {mount} from 'react-mounter';
 
-import MainLayout from '/client/modules/core/components/layout.main.jsx';
-import PostList from '/client/modules/core/containers/postlist';
-import Post from '/client/modules/core/containers/post';
-import NewPost from '/client/modules/core/containers/newpost';
+import MainLayout from './components/main_layout.jsx';
+import PostList from './containers/postlist';
+import Post from './containers/post';
+import NewPost from './containers/newpost';
 
 export default function (injectDeps) {
   const MainLayoutCtx = injectDeps(MainLayout);
