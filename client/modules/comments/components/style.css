@@ -1,0 +1,19 @@
+.comments {
+  font-size: 13px;
+}
+
+.comments textarea {
+  width: 250px;
+  outline: 0;
+  border: 1px solid #ddd;
+  padding: 5px 5px;
+}
+
+.comments .comment-list {
+  margin-top: 15px;
+}
+
+.comments .error {
+  color: red;
+  padding: 5px 0;
+}

@@ -1,0 +1,45 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+  padding: 10px 20px;
+}
+
+header {
+  border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+footer {
+  margin-top: 50px;
+  border-top: 1px solid #EAEAEA;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.postlist li {
+  margin: 8px 0;
+}
+
+.postlist li a {
+  text-decoration: none;
+}
+
+.new-post input,
+.new-post textarea {
+  width: 350px;
+  outline: 0;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  padding: 4px 6px;
+}
+
+.new-post textarea {
+  height: 200px;
+}
+
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+}
