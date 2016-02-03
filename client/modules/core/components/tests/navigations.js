@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import Navigation from '../navigation.jsx';
 
-describe('components.navigation', () => {
+describe('core.components.navigation', () => {
   it('should contain a link to home', () => {
     const el = shallow(<Navigation />);
     const homeLink = el.find('a').at(0);

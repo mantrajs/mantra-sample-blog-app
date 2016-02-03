@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {stub, spy} from 'sinon';
 import {composer} from '../postlist';
 
-describe('containers.postlist', () => {
+describe('core.containers.postlist', () => {
   describe('composer', () => {
     it('should subscribe to posts.list', () => {
       const Meteor = {subscribe: stub()};

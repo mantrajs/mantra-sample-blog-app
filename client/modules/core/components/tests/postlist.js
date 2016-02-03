@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import PostList from '../postlist.jsx';
 
-describe('components.postlist', () => {
+describe('core.components.postlist', () => {
   const posts = [
     {title: 't-one', _id: 'one'},
     {title: 't-two', _id: 'two'},

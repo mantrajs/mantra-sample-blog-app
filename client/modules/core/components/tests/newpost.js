@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import NewPost from '../newpost.jsx';
 
-describe('components.newpost', () => {
+describe('core.components.newpost', () => {
   it('should show the error if there are any', () => {
     const error = 'TheError';
     const el = shallow(<NewPost error={error} />);

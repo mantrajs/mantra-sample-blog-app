@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import Post from '../post.jsx';
 
-describe('components.post', () => {
+describe('core.components.post', () => {
   it('should display the post title', () => {
     const post = {title: 'Nice One'};
     const el = shallow(<Post post={post} />);

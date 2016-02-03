@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 import MainLayout from '../main_layout.jsx';
 import Navigation from '../navigation.jsx';
 
-describe('components.layouts.main', () => {
+describe('core.components.main_layout', () => {
   it('should contain navigation', () => {
     const el = shallow(<MainLayout />);
     expect(el.contains(<Navigation />)).to.be.equal(true);

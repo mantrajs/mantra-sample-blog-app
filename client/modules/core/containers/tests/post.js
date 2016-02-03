@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {stub, spy} from 'sinon';
 import {composer} from '../post';
 
-describe('containers.post', () => {
+describe('core.containers.post', () => {
   describe('composer', () => {
     const Tracker = {nonreactive: cb => cb()};
     const getCollections = (post) => {

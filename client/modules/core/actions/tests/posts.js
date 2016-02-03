@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {spy, stub} from 'sinon';
 import actions from '../posts';
 
-describe('actions.posts', () => {
+describe('core.actions.posts', () => {
   describe('create', () => {
     it('should reject if title is not there', () => {
       const LocalState = {set: spy()};
