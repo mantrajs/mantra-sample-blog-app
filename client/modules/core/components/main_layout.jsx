@@ -13,7 +13,7 @@ const Layout = ({content = () => null }) => (
     </div>
 
     <footer>
-    <small>Built with <a href='https://github.com/kadirahq/mantra'>Mantra</a> & Meteor.</small>
+    <small>Built with <a href='https://github.com/kadirahq/mantra'>Mantra</a> &amp; Meteor.</small>
     </footer>
   </div>
 );
