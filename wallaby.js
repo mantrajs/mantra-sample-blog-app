@@ -1,4 +1,10 @@
 module.exports = function (wallaby) {
+  // There is a weird error with the mui and mantra.
+  // See: https://goo.gl/cLH8ib
+  // Using require here seems to be the error.
+  // Renaming it into `load` just fixed the issue.
+  var load = require;
+
   return {
     files: [
       'client/modules/**/components/*.jsx',
@@ -11,7 +17,7 @@ module.exports = function (wallaby) {
     ],
     compilers: {
        '**/*.js*': wallaby.compilers.babel({
-         babel: require('babel-core'),
+         babel: load('babel-core'),
          presets: ['es2015', 'stage-2', 'react']
        })
     },
