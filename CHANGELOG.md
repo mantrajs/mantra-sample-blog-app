@@ -1,3 +1,8 @@
+## 0.2.0-3
+2016-Feb-09
+
+* Change back to FlowRouter to avoid some issues comes with 1.3-update-8
+
 ## 0.2.0-2
 2016-Feb-09
 
