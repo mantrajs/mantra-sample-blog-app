@@ -1,3 +1,8 @@
+## 0.2.0-2
+2016-Feb-09
+
+* Fix issue [#43](https://github.com/mantrajs/mantra-sample-blog-app/issues/43).
+
 ## 0.2.0-1
 2016-Feb-03
 
