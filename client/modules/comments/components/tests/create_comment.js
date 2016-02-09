@@ -23,7 +23,7 @@ describe('comments.components.create_comment', () => {
     const postId = 'the-id';
     const text = 'the-text';
 
-    const onCreate = (c) => {
+    const onCreate = () => {
       expect(postId).to.be.equal(postId);
       expect(text).to.be.equal(text);
       done();
