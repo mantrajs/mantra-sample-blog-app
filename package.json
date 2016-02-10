@@ -2,7 +2,7 @@
   "name": "mantra-demo",
   "version": "0.2.0-3",
   "scripts": {
-    "lint": "eslint ./libs ./client ./server --ext .js --ext .jsx",
+    "lint": "eslint ./lib ./client ./server --ext .js --ext .jsx",
     "lintfix": "npm run lint -- --fix",
     "testonly": "mocha client/**/tests/**/*.js --compilers js:babel-core/register",
     "test": "npm run lint && npm run testonly",
