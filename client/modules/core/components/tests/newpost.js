@@ -14,11 +14,11 @@ describe('core.components.newpost', () => {
     const el = shallow(<NewPost />);
     const title = el.find('input').first();
     const content = el.find('textarea').first();
-    const button = el.find('button').first();
+    const form = el.find('form').first();
 
     expect(title.node.ref).to.be.equal('titleRef');
     expect(content.node.ref).to.be.equal('contentRef');
-    expect(button.prop('onClick')).to.be.a('function');
+    expect(form.prop('onSubmit')).to.be.a('function');
   });
 
   it('should create a new post when click on the button', done => {
@@ -39,6 +39,6 @@ describe('core.components.newpost', () => {
       contentRef: {value: content}
     };
 
-    el.find('button').simulate('click');
+    el.find('form').simulate('submit');
   });
 });
