@@ -30,33 +30,58 @@ describe('core.containers.post', () => {
       ]);
     });
 
-    describe('while subscribing', () => {
-      it('should call just onData()', () => {
-        const Meteor = {subscribe: stub()};
-        const Collections = getCollections();
+    describe('before subscription ready', () => {
+      describe('with latency componsation', () => {
+        it('should call onData with data', done => {
+          const Meteor = {subscribe: stub()};
+          Meteor.subscribe.returns({ready: () => false});
+          const post = {aa: 10};
+          const Collections = getCollections(post);
 
-        const context = () => ({Meteor, Tracker, Collections});
-        const postId = 'dwd';
-        const onData = spy();
+          const context = () => ({Meteor, Tracker, Collections});
+          const postId = 'dwd';
+          const onData = (err, data) => {
+            expect(data).to.be.deep.equal({post});
+            done();
+          };
 
-        composer({context, postId}, onData);
-        expect(onData.args[0]).to.deep.equal([]);
+          composer({context, postId}, onData);
+        });
+      });
+
+      describe('with no latency componsation', () => {
+        it('should call onData without nothing', done => {
+          const Meteor = {subscribe: stub()};
+          Meteor.subscribe.returns({ready: () => false});
+          const Collections = getCollections();
+
+          const context = () => ({Meteor, Tracker, Collections});
+          const postId = 'dwd';
+          const onData = (err, data) => {
+            expect(data).to.be.equal(undefined);
+            done();
+          };
+
+          composer({context, postId}, onData);
+        });
       });
     });
 
-    describe('after subscribed', () => {
-      it('should find the post and send it to onData', () => {
+    describe('after subscription is ready', () => {
+      it('should call onData with data', done => {
         const Meteor = {subscribe: stub()};
-
-        const post = {_id: 'post'};
+        Meteor.subscribe.returns({ready: () => false});
+        const post = {aa: 10};
         const Collections = getCollections(post);
 
-        const context = () => ({Meteor, Collections, Tracker});
+        const context = () => ({Meteor, Tracker, Collections});
         const postId = 'dwd';
-        const onData = spy();
+        const onData = (err, data) => {
+          expect(data).to.be.deep.equal({post});
+          done();
+        };
 
         composer({context, postId}, onData);
-        expect(onData.args[0]).to.deep.equal([ null, {post} ]);
       });
     });
   });
