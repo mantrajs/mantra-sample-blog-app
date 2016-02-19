@@ -1,3 +1,13 @@
+## 0.2.1
+2016-Feb-20
+
+* Updated to latest version of the spec (0.2.1). There was no changes needed to this app.
+* Update enzyme to 2.0.0 and make the test tooling ready for [jsdom](https://github.com/tmpvar/jsdom).
+* Fix reactivity issues of [single post](https://github.com/mantrajs/mantra-sample-blog-app/issues/48).
+* Import wallaby related [issues](https://github.com/mantrajs/mantra-sample-blog-app/pull/62).
+* Use a [form](https://github.com/mantrajs/mantra-sample-blog-app/pull/61) for the new post UI.
+* Add [tests](https://github.com/mantrajs/mantra-sample-blog-app/pull/50) for comments.
+
 ## 0.2.0-3
 2016-Feb-09
 
