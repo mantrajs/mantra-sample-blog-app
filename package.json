@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "eslint ./lib ./client ./server --ext .js --ext .jsx",
     "lintfix": "npm run lint -- --fix",
-    "testonly": "mocha client/**/tests/**/*.js --compilers js:babel-core/register",
+    "testonly": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js,jsx"
   },
@@ -17,18 +17,19 @@
     "babel-preset-stage-2": "6.x.x",
     "babel-root-slash-import": "1.x.x",
     "chai": "3.x.x",
-    "enzyme": "1.x.x",
+    "enzyme": "^2.0.0",
     "eslint": "1.10.x",
     "eslint-plugin-react": "3.15.x",
     "mocha": "2.x.x",
     "react-addons-test-utils": "^0.14.6",
-    "sinon": "1.17.x"
+    "sinon": "1.17.x",
+    "jsdom": "^8.0.4"
   },
   "dependencies": {
     "domready": "^1.0.8",
+    "mantra-core": "^1.2.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "mantra-core": "^1.2.0",
     "react-mounter": "^1.0.0"
   },
   "private": true
