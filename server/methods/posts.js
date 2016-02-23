@@ -9,7 +9,7 @@ export default function () {
       check(title, String);
       check(content, String);
 
-      // Show the latency compensations
+      // Demo the latency compensations (Delete this in production)
       Meteor._sleepForMs(500);
 
       // XXX: Do some user authorization
