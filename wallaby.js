@@ -24,6 +24,9 @@ module.exports = function (wallaby) {
     env: {
       type: 'node'
     },
-    testFramework: 'mocha'
+    testFramework: 'mocha',
+    setup: function() {
+      global.React = require('react');
+    }
   };
 };
