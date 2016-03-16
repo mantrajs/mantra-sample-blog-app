@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 0.3.1
+2016-March-17
+
+* Use vanilla FlowRouter
+
 ## 0.3.0
 2016-March-17
 
