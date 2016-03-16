@@ -1,3 +1,12 @@
+# ChangeLog
+
+## 0.3.0
+2016-March-17
+
+* A lot of minor changes.
+* Use Meteor 1.3 RC1.
+* Use FlowRouter SSR (which compatible with Meteor 1.3 RC)
+
 ## 0.2.1
 2016-Feb-20
 
