@@ -70,7 +70,7 @@ describe('core.containers.post', () => {
     describe('after subscription is ready', () => {
       it('should call onData with data', done => {
         const Meteor = {subscribe: stub()};
-        Meteor.subscribe.returns({ready: () => false});
+        Meteor.subscribe.returns({ready: () => true});
         const post = {aa: 10};
         const Collections = getCollections(post);
 
