@@ -25,3 +25,10 @@ npm test
 
 **See package.json for more information about testing setup.**
 
+### Running Storybook
+
+This app is setup for [React Storybook](https://github.com/kadirahq/react-storybook). Run following command to start the React Storybook:
+
+```
+npm run storybook
+```
