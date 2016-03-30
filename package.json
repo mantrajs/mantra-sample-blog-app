@@ -6,9 +6,11 @@
     "lintfix": "npm run lint -- --fix",
     "testonly": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register",
     "test": "npm run lint && npm run testonly",
-    "test-watch": "npm run testonly -- --watch --watch-extensions js,jsx"
+    "test-watch": "npm run testonly -- --watch --watch-extensions js,jsx",
+    "storybook": "storybook-server -p 9001"
   },
   "devDependencies": {
+    "@kadira/storybook": "^0.12.0",
     "babel-core": "6.x.x",
     "babel-plugin-react-require": "2.x.x",
     "babel-polyfill": "6.x.x",
@@ -20,10 +22,12 @@
     "enzyme": "^2.0.0",
     "eslint": "1.10.x",
     "eslint-plugin-react": "3.15.x",
+    "jsdom": "^8.0.4",
     "mocha": "2.x.x",
+    "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^0.14.6",
     "sinon": "1.17.x",
-    "jsdom": "^8.0.4"
+    "style-loader": "^0.13.1"
   },
   "dependencies": {
     "domready": "^1.0.8",

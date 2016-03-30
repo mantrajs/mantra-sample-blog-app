@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentList from '../../comments/containers/comment_list.js';
+// import CommentList from '../../comments/containers/comment_list.js';
 
 const Post = ({post}) => (
   <div>
@@ -10,7 +10,6 @@ const Post = ({post}) => (
     </p>
     <div>
       <h4>Comments</h4>
-      <CommentList postId={post._id}/>
     </div>
   </div>
 );

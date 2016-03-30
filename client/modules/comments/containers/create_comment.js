@@ -1,7 +1,7 @@
 import {
   useDeps, composeWithTracker, composeAll
 } from 'mantra-core';
-import Component from '../components/create_comment.jsx';
+import Component from '../components/create_comment.js';
 
 export const composer = ({context, clearErrors}, onData) => {
   const {LocalState} = context();
