@@ -7,7 +7,7 @@ module.exports = function (wallaby) {
 
   return {
     files: [
-      'client/modules/**/components/*.jsx',
+      'client/modules/**/components/*.js',
       'client/modules/**/actions/*.js',
       'client/modules/**/containers/*.js',
       'client/modules/**/libs/*.js'
