@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import Post from '../post';
 
-storiesOf('Post', module)
+storiesOf('core.Post', module)
   .add('default view', () => {
     const post = {
       title: 'React storybook is great',
