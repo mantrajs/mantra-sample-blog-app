@@ -7,7 +7,7 @@
     "testonly": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js,jsx",
-    "storybook": "storybook-server -p 9001"
+    "storybook": "start-storybook -p 9001"
   },
   "devDependencies": {
     "@kadira/storybook": "^0.12.0",
