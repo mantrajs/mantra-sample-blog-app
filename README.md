@@ -32,3 +32,17 @@ This app is setup for [React Storybook](https://github.com/kadirahq/react-storyb
 ```
 npm run storybook
 ```
+
+**NOTE:** If this gives you missing module errors, React Storybook requires npm v3 - you can install it with
+
+```
+npm install -g npm3
+```
+
+delete your existing node_modules folder, and then run 
+
+```
+npm3 install && npm run storybook 
+```
+
+to get a working storybook running
