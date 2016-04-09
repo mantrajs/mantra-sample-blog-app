@@ -1,6 +1,6 @@
 {
   "name": "mantra-demo",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "scripts": {
     "lint": "eslint ./lib ./client ./server --ext .js",
     "lintfix": "npm run lint -- --fix",
