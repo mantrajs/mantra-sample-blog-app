@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 9001 -s ./public"
   },
   "devDependencies": {
-    "@kadira/storybook": "^1.1.0",
+    "@kadira/storybook": "^1.7.0",
     "babel-core": "6.x.x",
     "babel-plugin-react-require": "2.x.x",
     "babel-polyfill": "6.x.x",
@@ -19,22 +19,22 @@
     "babel-preset-stage-2": "6.x.x",
     "babel-root-slash-import": "1.x.x",
     "chai": "3.x.x",
-    "enzyme": "^2.0.0",
+    "enzyme": "^2.2.0",
     "eslint": "1.10.x",
     "eslint-plugin-react": "3.15.x",
     "jsdom": "^8.0.4",
     "mocha": "2.x.x",
     "raw-loader": "^0.5.1",
-    "react-addons-test-utils": "^0.14.6",
+    "react-addons-test-utils": "^15.0.0",
     "sinon": "1.17.x",
     "style-loader": "^0.13.1"
   },
   "dependencies": {
     "domready": "^1.0.8",
-    "mantra-core": "^1.4.0",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
-    "react-mounter": "^1.0.0"
+    "mantra-core": "^1.5.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-mounter": "^1.2.0"
   },
   "private": true
 }
