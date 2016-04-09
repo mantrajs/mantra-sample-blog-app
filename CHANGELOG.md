@@ -1,5 +1,11 @@
 # ChangeLog
 
+## 0.4.0
+2016-April-08
+
+* Update React to version v15.x.x
+* Various minor changes.
+
 ## 0.3.1
 2016-March-17
 
