@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 0.4.1
+2016-June-22
+
+* Add stubbing support for storybook.
+
 ## 0.4.0
 2016-April-08
 

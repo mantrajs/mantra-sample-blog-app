@@ -1,6 +1,6 @@
 {
   "name": "mantra-demo",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "scripts": {
     "lint": "eslint ./lib ./client ./server --ext .js",
     "lintfix": "npm run lint -- --fix",
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "domready": "^1.0.8",
-    "mantra-core": "^1.5.0",
+    "mantra-core": "^1.7.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-mounter": "^1.2.0"

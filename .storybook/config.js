@@ -1,7 +1,9 @@
 import { configure } from '@kadira/storybook';
-import { disable } from 'react-komposer';
+import { setStubbingMode } from 'react-komposer';
 
-disable();
+// Enable react-komposer stubbing.
+// See: https://github.com/kadirahq/react-komposer#stubbing
+setStubbingMode(true);
 
 function loadStories() {
   require('../client/modules/core/components/.stories');

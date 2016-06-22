@@ -1,6 +1,18 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
+import { setComposerStub } from 'react-komposer';
 import CommentList from '../comment_list';
+import CreateComment from '../../containers/create_comment';
+
+// Create the stub for the composer.
+setComposerStub(CreateComment, (props) => {
+  const data = {
+    ...props,
+    create: action('create comment'),
+  };
+
+  return data;
+});
 
 storiesOf('comments.CommentList', module)
   .add('no comments', () => {
